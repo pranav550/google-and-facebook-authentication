@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>User Details</span>
+    <span class="header-logout" (click)="signOut()" *ngIf="user">Logout</span>
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+<mat-card class="example-card" *ngIf="user">
+  <mat-card-header>
+    <mat-card-title>{{ user.name }}</mat-card-title>
+    <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ user.photoUrl }}" >
+</mat-card>
